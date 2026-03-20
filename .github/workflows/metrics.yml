@@ -14,40 +14,14 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: kolezka
-          template: classic
+          template: terminal
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/Warsaw
-          config_display: large
           config_output: svg
-          config_padding: 6%, 10%
-          extras_css: |
-            * { font-family: 'Segoe UI', Ubuntu, sans-serif; }
-            h1, h2, h3 { color: #58A6FF !important; }
-            svg { background: #0D1117; border-radius: 12px; }
-            section { border-color: #21262D !important; }
-            .field { color: #C9D1D9 !important; }
-            .value { color: #58A6FF !important; }
-            .progress { background-color: #161B22 !important; border-radius: 6px !important; }
-
-          # Languages breakdown
-          plugin_languages: yes
-          plugin_languages_analysis_timeout: 15
-          plugin_languages_categories: markup, programming
-          plugin_languages_colors: github
-          plugin_languages_limit: 10
-          plugin_languages_recent_categories: markup, programming
-          plugin_languages_recent_days: 90
-          plugin_languages_sections: most-used
-          plugin_languages_threshold: 0%
 
           # Isometric calendar
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
-
-          # Notable contributions
-          plugin_notable: yes
-          plugin_notable_from: organization
-          plugin_notable_types: commit
 
           # Stars
           plugin_stars: yes
