@@ -16,7 +16,3 @@
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com?user=kolezka&theme=github-dark-blue&hide_border=true" />
 </p>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=kolezka&theme=darkhub&no-frame=true&column=6&margin-w=10" width="95%" />
-</p>
