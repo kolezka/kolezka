@@ -18,5 +18,5 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/kolezka/kolezka/blob/main/github-metrics.svg" />
+  <img src="./github-metrics.svg" />
 </p>
