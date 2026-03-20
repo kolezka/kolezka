@@ -18,5 +18,13 @@
 </p>
 
 <p align="center">
-  <img src="./github-metrics.svg" />
+  <img src="./header.svg" />
+</p>
+
+<p align="center">
+  <img src="./languages.svg" />
+</p>
+
+<p align="center">
+  <img src="./stargazers.svg" />
 </p>
