@@ -1,15 +1,3 @@
-<h1 align="center">Hey, I'm Mariusz</h1>
-
-<p align="center">
-  <a href="https://raqz.pl">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=32&duration=80&pause=200&color=58A6FF&center=true&vCenter=true&repeat=true&width=500&height=45&lines=%E2%94%8F%28%E3%83%BBo%E3%83%BB%29%E2%94%9B;%E2%94%97%28%E3%83%BBo%E3%83%BB%29%E2%94%93;%E2%94%8F%28%E3%83%BBo%E3%83%BB%29%E2%94%9B;%E2%94%97%28%E3%83%BBo%E3%83%BB%29%E2%94%93;%E2%94%8F%28%E2%89%A7%E2%96%BD%E2%89%A6%29%E2%94%9B;%E2%94%97%28%E2%89%A7%E2%96%BD%E2%89%A6%29%E2%94%93;%E2%94%8F%28%E2%89%A7%E2%96%BD%E2%89%A6%29%E2%94%9B;%E2%94%97%28%E2%89%A7%E2%96%BD%E2%89%A6%29%E2%94%93;%E2%99%AA%E2%94%8F%28%E3%83%BB%E2%88%80%E3%83%BB%29%E2%94%9B;%E2%99%AA%E2%94%97%28%E3%83%BB%E2%88%80%E3%83%BB%29%E2%94%93;%E2%99%AA%E2%94%8F%28%E3%83%BB%E2%88%80%E3%83%BB%29%E2%94%9B;%E2%99%AA%E2%94%97%28%E3%83%BB%E2%88%80%E3%83%BB%29%E2%94%93;%E2%94%94%28%E3%83%BB%CE%B5%E3%83%BB%29%E2%94%98;%E2%94%8C%28%E3%83%BB%CE%B5%E3%83%BB%29%E2%94%90;%E2%94%94%28%E3%83%BB%CE%B5%E3%83%BB%29%E2%94%98;%E2%94%8C%28%E3%83%BB%CE%B5%E3%83%BB%29%E2%94%90;%28%E3%83%8E%C2%B0%E2%96%BD%C2%B0%29%E3%83%8E;%5C%28%C2%B0%E2%96%BD%C2%B0%29%2F;%28%E3%83%8E%C2%B0%E2%96%BD%C2%B0%29%E3%83%8E;%5C%28%C2%B0%E2%96%BD%C2%B0%29%2F;%E2%99%AB%E2%95%B0%28%C2%B0o%C2%B0%29%E2%95%AF%E2%99%AB;%E2%99%AA%E2%95%B0%28%C2%B0o%C2%B0%29%E2%95%AF%E2%99%AA;%E2%99%AB%E2%95%B0%28%C2%B0o%C2%B0%29%E2%95%AF%E2%99%AB;%E2%99%AA%E2%95%B0%28%C2%B0o%C2%B0%29%E2%95%AF%E2%99%AA;%E2%99%AA%E3%83%BD%28%C2%B0o%C2%B0%29%EF%BE%89%E2%99%AA;%E2%99%AB%E3%83%BD%28%C2%B0o%C2%B0%29%EF%BE%89%E2%99%AB;%E2%99%AA%E3%83%BD%28%C2%B0o%C2%B0%29%EF%BE%89%E2%99%AA;%E2%99%AB%E3%83%BD%28%C2%B0o%C2%B0%29%EF%BE%89%E2%99%AB;%E2%98%86%2A%3A.o%28%E2%89%A7%E2%96%BD%E2%89%A6%29o.%3A%2A%E2%98%86;%E2%9C%A7%2A%3A.%28%E2%89%A7%E2%96%BD%E2%89%A6%29.%3A%2A%E2%9C%A7" alt="Typing SVG" />
-  </a>
-</p>
-
-<p align="center">
-  <strong>8+ years</strong> delivering products end-to-end
-</p>
-
 <p align="center">
   <a href="https://raqz.pl"><img src="https://img.shields.io/badge/raqz.pl-000?style=for-the-badge&logo=safari&logoColor=white" /></a>
   <a href="mailto:mariusz@raqz.pl"><img src="https://img.shields.io/badge/email-000?style=for-the-badge&logo=gmail&logoColor=white" /></a>
