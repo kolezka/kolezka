@@ -9,4 +9,8 @@
   <a href="https://github.com/kolezka"><img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kolezka&theme=github_dark&utcOffset=1" height="150" /></a>
 </p>
 
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kolezka&theme=github_dark" />
+</p>
+
 
