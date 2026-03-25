@@ -20,23 +20,14 @@ jobs:
       - name: Get repository update times
         id: get-dates
         run: |
-          # Get actual repository last updated dates
-          RAQZ_FNS=$(gh api repos/kolezka/raqz-fns --jq -r '.updated_at')
-          FLOWBOT=$(gh api repos/kolezka/flowbot --jq -r '.updated_at')
-          TG_CRAWLER=$(gh api repos/kolezka/tg-crawler --jq -r '.updated_at')
-          TG_CACHE=$(gh api repos/kolezka/tg-cache --jq -r '.updated_at')
-          KOLEZKA_SETUP=$(gh api repos/kolezka/kolezka-setup --jq -r '.updated_at')
-          FASTFETCH_BUILDER=$(gh api repos/kolezka/fastfetch-builder --jq -r '.updated_at')
-          NL5H00X=$(gh api repos/kolezka/NL5H00X --jq -r '.updated_at')
-          
-          # Format dates using GNU date (Linux compatible) - handle Z timezone
-          echo "raqz_fns=$(date -d "${RAQZ_FNS/Z/+00:00}" '+%b %d')" >> $GITHUB_OUTPUT
-          echo "flowbot=$(date -d "${FLOWBOT/Z/+00:00}" '+%b %d')" >> $GITHUB_OUTPUT
-          echo "tg_crawler=$(date -d "${TG_CRAWLER/Z/+00:00}" '+%b %d')" >> $GITHUB_OUTPUT
-          echo "tg_cache=$(date -d "${TG_CACHE/Z/+00:00}" '+%b %d')" >> $GITHUB_OUTPUT
-          echo "kolezka_setup=$(date -d "${KOLEZKA_SETUP/Z/+00:00}" '+%b %d')" >> $GITHUB_OUTPUT
-          echo "fastfetch_builder=$(date -d "${FASTFETCH_BUILDER/Z/+00:00}" '+%b %d')" >> $GITHUB_OUTPUT
-          echo "nl5h00x=$(date -d "${NL5H00X/Z/+00:00}" '+%b %d')" >> $GITHUB_OUTPUT
+          # Get actual repository last updated dates and format them using jq with proper capitalization
+          echo "raqz_fns=$(gh api repos/kolezka/raqz-fns | jq -r '.updated_at | strptime("%Y-%m-%dT%H:%M:%SZ") | strftime("%b %d")' | sed 's/^./\U&/')" >> $GITHUB_OUTPUT
+          echo "flowbot=$(gh api repos/kolezka/flowbot | jq -r '.updated_at | strptime("%Y-%m-%dT%H:%M:%SZ") | strftime("%b %d")' | sed 's/^./\U&/')" >> $GITHUB_OUTPUT
+          echo "tg_crawler=$(gh api repos/kolezka/tg-crawler | jq -r '.updated_at | strptime("%Y-%m-%dT%H:%M:%SZ") | strftime("%b %d")' | sed 's/^./\U&/')" >> $GITHUB_OUTPUT
+          echo "tg_cache=$(gh api repos/kolezka/tg-cache | jq -r '.updated_at | strptime("%Y-%m-%dT%H:%M:%SZ") | strftime("%b %d")' | sed 's/^./\U&/')" >> $GITHUB_OUTPUT
+          echo "kolezka_setup=$(gh api repos/kolezka/kolezka-setup | jq -r '.updated_at | strptime("%Y-%m-%dT%H:%M:%SZ") | strftime("%b %d")' | sed 's/^./\U&/')" >> $GITHUB_OUTPUT
+          echo "fastfetch_builder=$(gh api repos/kolezka/fastfetch-builder | jq -r '.updated_at | strptime("%Y-%m-%dT%H:%M:%SZ") | strftime("%b %d")' | sed 's/^./\U&/')" >> $GITHUB_OUTPUT
+          echo "nl5h00x=$(gh api repos/kolezka/NL5H00X | jq -r '.updated_at | strptime("%Y-%m-%dT%H:%M:%SZ") | strftime("%b %d")' | sed 's/^./\U&/')" >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
