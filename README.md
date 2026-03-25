@@ -12,25 +12,18 @@
 
 ## 🚀 Projects
 
-### ⚡ raqz-fns
-Self-hosted serverless functions platform with TypeScript/JavaScript edge functions.
+**⚡ raqz-fns** — Self-hosted serverless functions platform with TypeScript/JavaScript edge functions
 
-### 🤖 FlowBot
-Multi-platform bot automation with visual flow builder for Telegram, Discord & WhatsApp.
+**🤖 FlowBot** — Multi-platform bot automation with visual flow builder for Telegram, Discord & WhatsApp
 
-### 🕷️ TG Crawler
-Telegram social graph crawler with MTProto and relationship analysis.
+**🕷️ TG Crawler** — Telegram social graph crawler with MTProto and relationship analysis
 
-### 🔧 kolezka-setup
-Modern terminal setup automation with Zsh, Starship prompt, and CLI tools for macOS/Linux.
+**🔧 kolezka-setup** — Modern terminal setup automation with Zsh, Starship prompt, and CLI tools for macOS/Linux
 
-### 🏗️ Fastfetch Builder
-Visual web builder for fastfetch system information tool configurations.
+**🏗️ Fastfetch Builder** — Visual web builder for fastfetch system information tool configurations
 
-### 💾 TG Viewer
-macOS Telegram backup utility for encrypted message databases and account metadata.
+**💾 TG Viewer** — macOS Telegram backup utility for encrypted message databases and account metadata
 
-### 🔌 NL5H00X
-Android projector firmware modification toolkit for bypassing security restrictions.
+**🔌 NL5H00X** — Android projector firmware modification toolkit for bypassing security restrictions
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:58A6FF&height=100&section=footer" width="100%" />
