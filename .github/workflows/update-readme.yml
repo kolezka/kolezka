@@ -29,14 +29,14 @@ jobs:
           FASTFETCH_BUILDER=$(gh api repos/kolezka/fastfetch-builder --jq -r '.updated_at')
           NL5H00X=$(gh api repos/kolezka/NL5H00X --jq -r '.updated_at')
           
-          # Format dates using GNU date (Linux compatible)
-          echo "raqz_fns=$(date -d "$RAQZ_FNS" '+%b %d')" >> $GITHUB_OUTPUT
-          echo "flowbot=$(date -d "$FLOWBOT" '+%b %d')" >> $GITHUB_OUTPUT
-          echo "tg_crawler=$(date -d "$TG_CRAWLER" '+%b %d')" >> $GITHUB_OUTPUT
-          echo "tg_cache=$(date -d "$TG_CACHE" '+%b %d')" >> $GITHUB_OUTPUT
-          echo "kolezka_setup=$(date -d "$KOLEZKA_SETUP" '+%b %d')" >> $GITHUB_OUTPUT
-          echo "fastfetch_builder=$(date -d "$FASTFETCH_BUILDER" '+%b %d')" >> $GITHUB_OUTPUT
-          echo "nl5h00x=$(date -d "$NL5H00X" '+%b %d')" >> $GITHUB_OUTPUT
+          # Format dates using GNU date (Linux compatible) - handle Z timezone
+          echo "raqz_fns=$(date -d "${RAQZ_FNS/Z/+00:00}" '+%b %d')" >> $GITHUB_OUTPUT
+          echo "flowbot=$(date -d "${FLOWBOT/Z/+00:00}" '+%b %d')" >> $GITHUB_OUTPUT
+          echo "tg_crawler=$(date -d "${TG_CRAWLER/Z/+00:00}" '+%b %d')" >> $GITHUB_OUTPUT
+          echo "tg_cache=$(date -d "${TG_CACHE/Z/+00:00}" '+%b %d')" >> $GITHUB_OUTPUT
+          echo "kolezka_setup=$(date -d "${KOLEZKA_SETUP/Z/+00:00}" '+%b %d')" >> $GITHUB_OUTPUT
+          echo "fastfetch_builder=$(date -d "${FASTFETCH_BUILDER/Z/+00:00}" '+%b %d')" >> $GITHUB_OUTPUT
+          echo "nl5h00x=$(date -d "${NL5H00X/Z/+00:00}" '+%b %d')" >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
