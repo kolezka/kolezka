@@ -16,13 +16,13 @@
 
 ## 🚀 Projects
 
-**⚡ raqz-fns** — Self-hosted serverless functions platform with TypeScript/JavaScript edge functions *(Updated )*
+**⚡ raqz-fns** — Self-hosted serverless functions platform with TypeScript/JavaScript edge functions *(Updated Mar 25)*
 
-**🤖 FlowBot** — Multi-platform bot automation with visual flow builder for Telegram, Discord **🤖 FlowBot** — Multi-platform bot automation with visual flow builder for Telegram, Discord & WhatsApp WhatsApp *(Updated Mar 25)*
+**🤖 FlowBot** — Multi-platform bot automation with visual flow builder for Telegram, Discord & WhatsApp *(Updated Mar 25)*
 
-**🕷️ TG Crawler** — Telegram social graph crawler with MTProto and relationship analysis *(Updated )*
+**🕷️ TG Crawler** — Telegram social graph crawler with MTProto and relationship analysis *(Updated Mar 25)*
 
-**💾 TG Viewer** — macOS Telegram backup utility for encrypted message databases and account metadata *(Updated )*
+**💾 TG Viewer** — macOS Telegram backup utility for encrypted message databases and account metadata *(Updated Mar 25)*
 
 **🔧 kolezka-setup** — Modern terminal setup automation with Zsh, Starship prompt, and CLI tools for macOS/Linux *(Updated Mar 25)*
 
