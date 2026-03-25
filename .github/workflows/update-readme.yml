@@ -17,22 +17,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          
       - name: Get repository update times
         id: get-dates
         run: |
-          # Get update dates for each repo and format them using Node.js for cross-platform compatibility
-          echo "raqz_fns=$(gh api repos/kolezka/raqz-fns --jq '.updated_at' | xargs -I {} node -e "console.log(new Date('{}').toLocaleDateString('en-US', {month: 'short', day: 'numeric'}))")" >> $GITHUB_OUTPUT
-          echo "flowbot=$(gh api repos/kolezka/flowbot --jq '.updated_at' | xargs -I {} node -e "console.log(new Date('{}').toLocaleDateString('en-US', {month: 'short', day: 'numeric'}))")" >> $GITHUB_OUTPUT
-          echo "tg_crawler=$(gh api repos/kolezka/tg-crawler --jq '.updated_at' | xargs -I {} node -e "console.log(new Date('{}').toLocaleDateString('en-US', {month: 'short', day: 'numeric'}))")" >> $GITHUB_OUTPUT
-          echo "tg_cache=$(gh api repos/kolezka/tg-cache --jq '.updated_at' | xargs -I {} node -e "console.log(new Date('{}').toLocaleDateString('en-US', {month: 'short', day: 'numeric'}))")" >> $GITHUB_OUTPUT
-          echo "kolezka_setup=$(gh api repos/kolezka/kolezka-setup --jq '.updated_at' | xargs -I {} node -e "console.log(new Date('{}').toLocaleDateString('en-US', {month: 'short', day: 'numeric'}))")" >> $GITHUB_OUTPUT
-          echo "fastfetch_builder=$(gh api repos/kolezka/fastfetch-builder --jq '.updated_at' | xargs -I {} node -e "console.log(new Date('{}').toLocaleDateString('en-US', {month: 'short', day: 'numeric'}))")" >> $GITHUB_OUTPUT
-          echo "nl5h00x=$(gh api repos/kolezka/NL5H00X --jq '.updated_at' | xargs -I {} node -e "console.log(new Date('{}').toLocaleDateString('en-US', {month: 'short', day: 'numeric'}))")" >> $GITHUB_OUTPUT
+          # Get actual repository last updated dates
+          RAQZ_FNS=$(gh api repos/kolezka/raqz-fns --jq -r '.updated_at')
+          FLOWBOT=$(gh api repos/kolezka/flowbot --jq -r '.updated_at')
+          TG_CRAWLER=$(gh api repos/kolezka/tg-crawler --jq -r '.updated_at')
+          TG_CACHE=$(gh api repos/kolezka/tg-cache --jq -r '.updated_at')
+          KOLEZKA_SETUP=$(gh api repos/kolezka/kolezka-setup --jq -r '.updated_at')
+          FASTFETCH_BUILDER=$(gh api repos/kolezka/fastfetch-builder --jq -r '.updated_at')
+          NL5H00X=$(gh api repos/kolezka/NL5H00X --jq -r '.updated_at')
+          
+          # Format dates using GNU date (Linux compatible)
+          echo "raqz_fns=$(date -d "$RAQZ_FNS" '+%b %d')" >> $GITHUB_OUTPUT
+          echo "flowbot=$(date -d "$FLOWBOT" '+%b %d')" >> $GITHUB_OUTPUT
+          echo "tg_crawler=$(date -d "$TG_CRAWLER" '+%b %d')" >> $GITHUB_OUTPUT
+          echo "tg_cache=$(date -d "$TG_CACHE" '+%b %d')" >> $GITHUB_OUTPUT
+          echo "kolezka_setup=$(date -d "$KOLEZKA_SETUP" '+%b %d')" >> $GITHUB_OUTPUT
+          echo "fastfetch_builder=$(date -d "$FASTFETCH_BUILDER" '+%b %d')" >> $GITHUB_OUTPUT
+          echo "nl5h00x=$(date -d "$NL5H00X" '+%b %d')" >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
