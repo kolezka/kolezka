@@ -25,27 +25,14 @@ jobs:
       - name: Get repository update times
         id: get-dates
         run: |
-          # Function to format date
-          format_date() {
-            date -d "$1" "+%b %d" 2>/dev/null || date -j -f "%Y-%m-%dT%H:%M:%SZ" "$1" "+%b %d"
-          }
-          
-          # Get update dates for each repo
-          RAQZ_FNS=$(gh api repos/kolezka/raqz-fns --jq '.updated_at')
-          FLOWBOT=$(gh api repos/kolezka/flowbot --jq '.updated_at')
-          TG_CRAWLER=$(gh api repos/kolezka/tg-crawler --jq '.updated_at')
-          TG_CACHE=$(gh api repos/kolezka/tg-cache --jq '.updated_at')
-          KOLEZKA_SETUP=$(gh api repos/kolezka/kolezka-setup --jq '.updated_at')
-          FASTFETCH_BUILDER=$(gh api repos/kolezka/fastfetch-builder --jq '.updated_at')
-          NL5H00X=$(gh api repos/kolezka/NL5H00X --jq '.updated_at')
-          
-          echo "raqz_fns=$(format_date "$RAQZ_FNS")" >> $GITHUB_OUTPUT
-          echo "flowbot=$(format_date "$FLOWBOT")" >> $GITHUB_OUTPUT
-          echo "tg_crawler=$(format_date "$TG_CRAWLER")" >> $GITHUB_OUTPUT
-          echo "tg_cache=$(format_date "$TG_CACHE")" >> $GITHUB_OUTPUT
-          echo "kolezka_setup=$(format_date "$KOLEZKA_SETUP")" >> $GITHUB_OUTPUT
-          echo "fastfetch_builder=$(format_date "$FASTFETCH_BUILDER")" >> $GITHUB_OUTPUT
-          echo "nl5h00x=$(format_date "$NL5H00X")" >> $GITHUB_OUTPUT
+          # Get update dates for each repo and format them
+          echo "raqz_fns=$(gh api repos/kolezka/raqz-fns --jq '.updated_at' | xargs -I {} date -d {} '+%b %d')" >> $GITHUB_OUTPUT
+          echo "flowbot=$(gh api repos/kolezka/flowbot --jq '.updated_at' | xargs -I {} date -d {} '+%b %d')" >> $GITHUB_OUTPUT
+          echo "tg_crawler=$(gh api repos/kolezka/tg-crawler --jq '.updated_at' | xargs -I {} date -d {} '+%b %d')" >> $GITHUB_OUTPUT
+          echo "tg_cache=$(gh api repos/kolezka/tg-cache --jq '.updated_at' | xargs -I {} date -d {} '+%b %d')" >> $GITHUB_OUTPUT
+          echo "kolezka_setup=$(gh api repos/kolezka/kolezka-setup --jq '.updated_at' | xargs -I {} date -d {} '+%b %d')" >> $GITHUB_OUTPUT
+          echo "fastfetch_builder=$(gh api repos/kolezka/fastfetch-builder --jq '.updated_at' | xargs -I {} date -d {} '+%b %d')" >> $GITHUB_OUTPUT
+          echo "nl5h00x=$(gh api repos/kolezka/NL5H00X --jq '.updated_at' | xargs -I {} date -d {} '+%b %d')" >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
