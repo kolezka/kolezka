@@ -7,6 +7,10 @@
 </p>
 
 <p align="center">
+  <img src="https://komarev.com/ghpvc/?username=kolezka&style=for-the-badge&color=58A6FF&label=PROFILE+VIEWS" alt="Profile Views" />
+</p>
+
+<p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kolezka&theme=github_dark" />
 </p>
 
