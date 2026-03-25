@@ -1,0 +1,89 @@
+name: Update README with Latest Project Updates
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Daily at midnight UTC
+  workflow_dispatch:      # Allow manual triggers
+  repository_dispatch:
+    types: [update-readme]
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Get repository update times
+        id: get-dates
+        run: |
+          # Function to format date
+          format_date() {
+            date -d "$1" "+%b %d" 2>/dev/null || date -j -f "%Y-%m-%dT%H:%M:%SZ" "$1" "+%b %d"
+          }
+          
+          # Get update dates for each repo
+          RAQZ_FNS=$(gh api repos/kolezka/raqz-fns --jq '.updated_at')
+          FLOWBOT=$(gh api repos/kolezka/flowbot --jq '.updated_at')
+          TG_CRAWLER=$(gh api repos/kolezka/tg-crawler --jq '.updated_at')
+          TG_CACHE=$(gh api repos/kolezka/tg-cache --jq '.updated_at')
+          KOLEZKA_SETUP=$(gh api repos/kolezka/kolezka-setup --jq '.updated_at')
+          FASTFETCH_BUILDER=$(gh api repos/kolezka/fastfetch-builder --jq '.updated_at')
+          NL5H00X=$(gh api repos/kolezka/NL5H00X --jq '.updated_at')
+          
+          echo "raqz_fns=$(format_date "$RAQZ_FNS")" >> $GITHUB_OUTPUT
+          echo "flowbot=$(format_date "$FLOWBOT")" >> $GITHUB_OUTPUT
+          echo "tg_crawler=$(format_date "$TG_CRAWLER")" >> $GITHUB_OUTPUT
+          echo "tg_cache=$(format_date "$TG_CACHE")" >> $GITHUB_OUTPUT
+          echo "kolezka_setup=$(format_date "$KOLEZKA_SETUP")" >> $GITHUB_OUTPUT
+          echo "fastfetch_builder=$(format_date "$FASTFETCH_BUILDER")" >> $GITHUB_OUTPUT
+          echo "nl5h00x=$(format_date "$NL5H00X")" >> $GITHUB_OUTPUT
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Update README
+        run: |
+          # Update the projects section with new dates
+          sed -i.bak -E "s/(\*\*⚡ raqz-fns\*\* — .*) \*\(Updated [^)]*\)\*/\1 *(Updated ${{ steps.get-dates.outputs.raqz_fns }})*/g" README.md
+          sed -i.bak -E "s/(\*\*🤖 FlowBot\*\* — .*) \*\(Updated [^)]*\)\*/\1 *(Updated ${{ steps.get-dates.outputs.flowbot }})*/g" README.md
+          sed -i.bak -E "s/(\*\*🕷️ TG Crawler\*\* — .*) \*\(Updated [^)]*\)\*/\1 *(Updated ${{ steps.get-dates.outputs.tg_crawler }})*/g" README.md
+          sed -i.bak -E "s/(\*\*💾 TG Viewer\*\* — .*) \*\(Updated [^)]*\)\*/\1 *(Updated ${{ steps.get-dates.outputs.tg_cache }})*/g" README.md
+          sed -i.bak -E "s/(\*\*🔧 kolezka-setup\*\* — .*) \*\(Updated [^)]*\)\*/\1 *(Updated ${{ steps.get-dates.outputs.kolezka_setup }})*/g" README.md
+          sed -i.bak -E "s/(\*\*🏗️ Fastfetch Builder\*\* — .*) \*\(Updated [^)]*\)\*/\1 *(Updated ${{ steps.get-dates.outputs.fastfetch_builder }})*/g" README.md
+          sed -i.bak -E "s/(\*\*🔌 NL5H00X\*\* — .*) \*\(Updated [^)]*\)\*/\1 *(Updated ${{ steps.get-dates.outputs.nl5h00x }})*/g" README.md
+          
+          # If no update dates exist, add them
+          if ! grep -q "Updated " README.md; then
+            sed -i.bak "s/\*\*⚡ raqz-fns\*\* — Self-hosted serverless functions platform with TypeScript\/JavaScript edge functions/\*\*⚡ raqz-fns\*\* — Self-hosted serverless functions platform with TypeScript\/JavaScript edge functions \*(Updated ${{ steps.get-dates.outputs.raqz_fns }})\*/g" README.md
+            sed -i.bak "s/\*\*🤖 FlowBot\*\* — Multi-platform bot automation with visual flow builder for Telegram, Discord & WhatsApp/\*\*🤖 FlowBot\*\* — Multi-platform bot automation with visual flow builder for Telegram, Discord & WhatsApp \*(Updated ${{ steps.get-dates.outputs.flowbot }})\*/g" README.md
+            sed -i.bak "s/\*\*🕷️ TG Crawler\*\* — Telegram social graph crawler with MTProto and relationship analysis/\*\*🕷️ TG Crawler\*\* — Telegram social graph crawler with MTProto and relationship analysis \*(Updated ${{ steps.get-dates.outputs.tg_crawler }})\*/g" README.md
+            sed -i.bak "s/\*\*💾 TG Viewer\*\* — macOS Telegram backup utility for encrypted message databases and account metadata/\*\*💾 TG Viewer\*\* — macOS Telegram backup utility for encrypted message databases and account metadata \*(Updated ${{ steps.get-dates.outputs.tg_cache }})\*/g" README.md
+            sed -i.bak "s/\*\*🔧 kolezka-setup\*\* — Modern terminal setup automation with Zsh, Starship prompt, and CLI tools for macOS\/Linux/\*\*🔧 kolezka-setup\*\* — Modern terminal setup automation with Zsh, Starship prompt, and CLI tools for macOS\/Linux \*(Updated ${{ steps.get-dates.outputs.kolezka_setup }})\*/g" README.md
+            sed -i.bak "s/\*\*🏗️ Fastfetch Builder\*\* — Visual web builder for fastfetch system information tool configurations/\*\*🏗️ Fastfetch Builder\*\* — Visual web builder for fastfetch system information tool configurations \*(Updated ${{ steps.get-dates.outputs.fastfetch_builder }})\*/g" README.md
+            sed -i.bak "s/\*\*🔌 NL5H00X\*\* — Android projector firmware modification toolkit for bypassing security restrictions/\*\*🔌 NL5H00X\*\* — Android projector firmware modification toolkit for bypassing security restrictions \*(Updated ${{ steps.get-dates.outputs.nl5h00x }})\*/g" README.md
+          fi
+          
+          rm -f README.md.bak
+          
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          if git diff --quiet; then
+            echo "No changes to commit"
+          else
+            git add README.md
+            git commit -m "chore: update project last modified dates
+
+🤖 Automated update via GitHub Actions"
+            git push
+          fi

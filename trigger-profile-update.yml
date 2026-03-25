@@ -1,0 +1,22 @@
+# Add this workflow to each of your project repositories
+# Path: .github/workflows/update-profile.yml
+
+name: Trigger Profile README Update
+
+on:
+  push:
+    branches: [main, master]
+  release:
+    types: [published]
+
+jobs:
+  trigger-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger profile update
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/kolezka/kolezka/dispatches \
+            -d '{"event_type":"update-readme"}'
