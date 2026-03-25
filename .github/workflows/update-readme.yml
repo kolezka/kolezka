@@ -25,14 +25,14 @@ jobs:
       - name: Get repository update times
         id: get-dates
         run: |
-          # Get update dates for each repo and format them
-          echo "raqz_fns=$(gh api repos/kolezka/raqz-fns --jq '.updated_at' | xargs -I {} date -d {} '+%b %d')" >> $GITHUB_OUTPUT
-          echo "flowbot=$(gh api repos/kolezka/flowbot --jq '.updated_at' | xargs -I {} date -d {} '+%b %d')" >> $GITHUB_OUTPUT
-          echo "tg_crawler=$(gh api repos/kolezka/tg-crawler --jq '.updated_at' | xargs -I {} date -d {} '+%b %d')" >> $GITHUB_OUTPUT
-          echo "tg_cache=$(gh api repos/kolezka/tg-cache --jq '.updated_at' | xargs -I {} date -d {} '+%b %d')" >> $GITHUB_OUTPUT
-          echo "kolezka_setup=$(gh api repos/kolezka/kolezka-setup --jq '.updated_at' | xargs -I {} date -d {} '+%b %d')" >> $GITHUB_OUTPUT
-          echo "fastfetch_builder=$(gh api repos/kolezka/fastfetch-builder --jq '.updated_at' | xargs -I {} date -d {} '+%b %d')" >> $GITHUB_OUTPUT
-          echo "nl5h00x=$(gh api repos/kolezka/NL5H00X --jq '.updated_at' | xargs -I {} date -d {} '+%b %d')" >> $GITHUB_OUTPUT
+          # Get update dates for each repo and format them using Node.js for cross-platform compatibility
+          echo "raqz_fns=$(gh api repos/kolezka/raqz-fns --jq '.updated_at' | xargs -I {} node -e "console.log(new Date('{}').toLocaleDateString('en-US', {month: 'short', day: 'numeric'}))")" >> $GITHUB_OUTPUT
+          echo "flowbot=$(gh api repos/kolezka/flowbot --jq '.updated_at' | xargs -I {} node -e "console.log(new Date('{}').toLocaleDateString('en-US', {month: 'short', day: 'numeric'}))")" >> $GITHUB_OUTPUT
+          echo "tg_crawler=$(gh api repos/kolezka/tg-crawler --jq '.updated_at' | xargs -I {} node -e "console.log(new Date('{}').toLocaleDateString('en-US', {month: 'short', day: 'numeric'}))")" >> $GITHUB_OUTPUT
+          echo "tg_cache=$(gh api repos/kolezka/tg-cache --jq '.updated_at' | xargs -I {} node -e "console.log(new Date('{}').toLocaleDateString('en-US', {month: 'short', day: 'numeric'}))")" >> $GITHUB_OUTPUT
+          echo "kolezka_setup=$(gh api repos/kolezka/kolezka-setup --jq '.updated_at' | xargs -I {} node -e "console.log(new Date('{}').toLocaleDateString('en-US', {month: 'short', day: 'numeric'}))")" >> $GITHUB_OUTPUT
+          echo "fastfetch_builder=$(gh api repos/kolezka/fastfetch-builder --jq '.updated_at' | xargs -I {} node -e "console.log(new Date('{}').toLocaleDateString('en-US', {month: 'short', day: 'numeric'}))")" >> $GITHUB_OUTPUT
+          echo "nl5h00x=$(gh api repos/kolezka/NL5H00X --jq '.updated_at' | xargs -I {} node -e "console.log(new Date('{}').toLocaleDateString('en-US', {month: 'short', day: 'numeric'}))")" >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
