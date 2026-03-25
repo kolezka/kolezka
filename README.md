@@ -18,11 +18,11 @@
 
 **🕷️ TG Crawler** — Telegram social graph crawler with MTProto and relationship analysis
 
+**💾 TG Viewer** — macOS Telegram backup utility for encrypted message databases and account metadata
+
 **🔧 kolezka-setup** — Modern terminal setup automation with Zsh, Starship prompt, and CLI tools for macOS/Linux
 
 **🏗️ Fastfetch Builder** — Visual web builder for fastfetch system information tool configurations
-
-**💾 TG Viewer** — macOS Telegram backup utility for encrypted message databases and account metadata
 
 **🔌 NL5H00X** — Android projector firmware modification toolkit for bypassing security restrictions
 
