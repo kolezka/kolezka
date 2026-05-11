@@ -20,9 +20,8 @@
 - **Mobile Lead Engineer at DirectDental** (2023–2025) — sole-dev'd the React Native app that contributed to the company's acquisition by **Henry Schein** (Fortune 500, NASDAQ: HSIC)
 - **Senior Engineer** via Sofomo (2021–2026) for US startups and scale-ups:
   - **Dynamic.xyz** (a16z-backed Web3 infrastructure) — multi-chain wallet SDK (Ethereum, Solana, Cosmos)
-  - **Globality** ($310M funded autonomous sourcing platform) — frontend for Fortune 500 / Global 2000 clients
-  - **Willow** (FemTech, $145M funded) — frontend lead on digital health platform
-  - **PublicSQ** — frontend lead on US social marketplace
+  - **Globality** - $310M funded autonomous sourcing platform
+  - **PublicSQ** — US social marketplace
 
 ## 🛠️ Stack
  
