@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kolezka&theme=github_dark" />
+  <img src="https://ghcards.raqz.link/c/kolezka/my-card.svg" />
 </p>
  
 **Senior / Lead Full-Stack Engineer**
