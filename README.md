@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://ghcards.raqz.link/c/kolezka/my-card.svg" />
+  <img src="https://ghcards.raqz.link/c/kolezka/profile-summary-nw6t.svg" />
 </p>
  
 **Senior / Lead Full-Stack Engineer**
