@@ -1,9 +1,10 @@
 <p align="center">
   <img src="https://ghcards.raqz.link/c/kolezka/profile-summary-nw6t.svg" />
 </p>
- 
-**Senior / Lead Full-Stack Engineer**
- web, mobile, and backend.
+
+<h1 align="center"> Mariusz Rakus</h1>
+<h2>Senior / Lead Full-Stack Engineer</h2>
+<h3>web, mobile, backend, iot</h3>
 
  <p align="center" style="transform: scale(0.875); opacity: 0.5;">
   <img src="https://komarev.com/ghpvc/?username=kolezka&style=flat&color=lightgrey&label=Views&abbreviated=true" alt="Profile Views" />
