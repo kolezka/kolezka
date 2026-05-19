@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://ghcards.raqz.link/c/kolezka/profile-summary-nw6t.svg" />
+  <img src="https://ghcards.raqz.link/c/kolezka/profile-summary-z5sg.svg" />
 </p>
 
 <p align="center"><font size="6"><b>Mariusz Rakus</b></font></p>
