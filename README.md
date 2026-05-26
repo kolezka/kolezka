@@ -12,9 +12,8 @@
 
 <p><font size="5"><b>🎯 Currently</b></font></p>
 
-- **Lead Full-Stack Engineer** on a mobile platform - React Native, FastAPI, Azure
-- **Senior Full-Stack Engineer (Contract)** via [Toptal](https://www.toptal.com/developers/resume/mariusz-rakus) — top 3% of engineers (2026)
-- **Principal Engineer & Founder** at [raqz.pl](https://raqz.pl) — my software engineering practice
+- **Lead Full-Stack Engineer** on a mobile platform via [STX Next](https://stxnext.pl/) for NASDAQ-listed pharma company
+- **Senior Full-Stack Engineer (Contract)** via [Toptal](https://www.toptal.com/developers/resume/mariusz-rakus), top 3% of engineers (2026)
 
 <p><font size="5"><b>🏆 Selected past</b></font></p>
 
