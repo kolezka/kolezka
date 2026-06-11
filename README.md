@@ -4,7 +4,7 @@
 
 <p align="center"><font size="6"><b>Mariusz Rakus</b></font></p>
 <p align="center"><font size="5"><b>Senior / Lead Full-Stack Engineer</b></font></p>
-<p align="center"><font size="4">web, mobile, backend, iot</font></p>
+<p align="center"><font size="4">web, mobile, backend</font></p>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=kolezka&style=flat&color=lightgrey&label=Views&abbreviated=true" alt="Profile Views" />
