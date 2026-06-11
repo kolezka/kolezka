@@ -23,9 +23,20 @@
   - **Globality** - $310M funded autonomous sourcing platform
   - **PublicSQ** — US social marketplace
 
+<p><font size="5"><b>🧪 Building</b></font></p>
+
+- **[ghcards.raqz.link](https://ghcards.raqz.link)** — dynamic SVG cards platform for GitHub profiles (the card at the top of this page is live proof)
+- **Self-hosted dev infrastructure** — Coolify-managed services and custom MCP servers powering AI-augmented engineering workflows
+
 <p><font size="5"><b>🛠️ Stack</b></font></p>
 
 **Core:** TypeScript, Python, React, Next.js, React Native, Node.js, AI-augmented engineering workflows (Claude Code, custom MCP tooling)
+
+**AI / Data:** RAG, pgvector, embeddings & vector search, LLM integrations (Anthropic, OpenAI, LangChain)
+
+**Cloud / Infra:** AWS, Azure, Docker, CI/CD, self-hosted infrastructure (Coolify)
+
+**Mobile:** Expo (EAS Build, New Architecture), native modules, OTA updates
 
 <p><font size="5"><b>📫 Connect</b></font></p>
 
