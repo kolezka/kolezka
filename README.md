@@ -10,12 +10,12 @@
 <h3>Mariusz Rakus, raqz.pl</h3>
 
 <p>Currently</p>
-
-- Lead Full-Stack Engineer** on a mobile platform via [STX Next](https://stxnext.pl/) for NASDAQ-listed pharma company
-- Senior Full-Stack Engineer (Contract)** via [Toptal](https://www.toptal.com/developers/resume/mariusz-rakus), top 3% of engineers (2026)
+- Senior Full-Stack Engineer (Contract) via [Toptal](https://www.toptal.com/developers/resume/mariusz-rakus), top 3% of engineers (2026)
+  - It's an honor for me to be part of the @inkitt team and to work with inspiring engineers
 
 <p>Past</p>
 
+- Lead Full-Stack Engineer on a mobile platform for NASDAQ-listed pharma company (2026)
 - Mobile Lead Engineer at DirectDental (2023–2025) — sole-dev'd the React Native app that contributed to the company's acquisition by **Henry Schein** (Fortune 500, NASDAQ: HSIC)
 - Software Engineer (2021–2026) for US startups and scale-ups:
   - **Dynamic.xyz** (a16z-backed Web3 infrastructure) — multi-chain wallet SDK (Ethereum, Solana, Cosmos)
