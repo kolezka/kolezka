@@ -11,7 +11,7 @@
 
 <p>Currently</p>
 - Senior Full-Stack Engineer (Contract) via [Toptal](https://www.toptal.com/developers/resume/mariusz-rakus), top 3% of engineers (2026)
-  - It's an honor for me to be part of the @inkitt team and to work with inspiring engineers
+    - It's an honor for me to be part of the @inkitt team and to work with inspiring engineers
 
 <p>Past</p>
 
