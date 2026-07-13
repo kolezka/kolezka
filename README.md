@@ -16,7 +16,7 @@
 
 <p>Past</p>
 
-- Lead Full-Stack Engineer on a mobile platform for NASDAQ-listed pharma company (2026)
+- Lead Full-Stack Engineer on a mobile platform for NASDAQ-listed pharma company (03.2026 - 07.2026)
 - Mobile Lead Engineer at DirectDental (2023–2025) — sole-dev'd the React Native app that contributed to the company's acquisition by **Henry Schein** (Fortune 500, NASDAQ: HSIC)
 - Software Engineer (2021–2026) for US startups and scale-ups:
   - **Dynamic.xyz** (a16z-backed Web3 infrastructure) — multi-chain wallet SDK (Ethereum, Solana, Cosmos)
